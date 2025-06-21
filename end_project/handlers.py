@@ -81,7 +81,6 @@ async def get_type(message: Message, state: FSMContext):
     )
     await state.set_state(TransactionStates.AMOUNT)
 
-
 @router.message(TransactionStates.AMOUNT)
 async def get_amount(message: Message, state: FSMContext):
     try:
